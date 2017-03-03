@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36F5E57E1E69392300CC9B03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F5E57D1E69392300CC9B03 /* AppDelegate.m */; };
 		5635327A1DADE67400C698E4 /* Myos_Private.bin in Resources */ = {isa = PBXBuildFile; fileRef = 563532791DADE67400C698E4 /* Myos_Private.bin */; };
 		5635327C1DADEB7500C698E4 /* ImageB1012.bin in Resources */ = {isa = PBXBuildFile; fileRef = 5635327B1DADEB7500C698E4 /* ImageB1012.bin */; };
 		5636A1111D7FA3320030C735 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5636A1101D7FA3320030C735 /* main.m */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36F5E57D1E69392300CC9B03 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		563532791DADE67400C698E4 /* Myos_Private.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = Myos_Private.bin; sourceTree = "<group>"; };
 		5635327B1DADEB7500C698E4 /* ImageB1012.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = ImageB1012.bin; sourceTree = "<group>"; };
 		5636A10C1D7FA3320030C735 /* blueToothDemo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blueToothDemo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +129,7 @@
 			children = (
 				5636A1491D7FA5EA0030C735 /* SingletonHead.h */,
 				5636A1121D7FA3320030C735 /* AppDelegate.h */,
+				36F5E57D1E69392300CC9B03 /* AppDelegate.m */,
 				5636A1571D7FC23E0030C735 /* BlueDeviceTableViewController.h */,
 				5636A1581D7FC23E0030C735 /* BlueDeviceTableViewController.m */,
 				5636A1151D7FA3320030C735 /* MasterViewController.h */,
@@ -323,6 +326,7 @@
 				5636A1171D7FA3320030C735 /* MasterViewController.m in Sources */,
 				5681D99B1D88F2F3002B013A /* WYCircleView.m in Sources */,
 				5636A1481D7FA5240030C735 /* SensBlueToothManager.m in Sources */,
+				36F5E57E1E69392300CC9B03 /* AppDelegate.m in Sources */,
 				5636A1111D7FA3320030C735 /* main.m in Sources */,
 				5636A11A1D7FA3320030C735 /* DetailViewController.m in Sources */,
 				5636A1501D7FA68D0030C735 /* AlertShowView.m in Sources */,

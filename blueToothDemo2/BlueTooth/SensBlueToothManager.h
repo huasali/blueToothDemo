@@ -105,12 +105,4 @@ single_interface(SensBlueToothManager)
 - (void)readWithPer:(CBPeripheral *)peripheral;
 @end
 
-typedef void(^Compltion)(id value);
 
-@interface SensBlueToothManager (sendMethed)
-
-+ (NSMutableDictionary *)dicWithSendType:(NSString *)type;
-
-- (void)sendValue:(NSDictionary *)valueDic withPer:(CBPeripheral *)per andCharac:(CBCharacteristic *)chara andCompltion:(Compltion)block;
-
-@end
