@@ -7,7 +7,7 @@
 //
 
 #import "DetailViewController.h"
-#import "AlertShowView.h"
+#import "JHAlertView.h"
 
 @interface DetailViewController ()<UITextFieldDelegate>{
     NSData *oad_A_Data;
@@ -80,7 +80,7 @@
 - (void)readValueWithCharacteristics:(CBCharacteristic *)characteristic andPer:(CBPeripheral *)peripheral{
     NSLog(@"\nreadValue-%@",characteristic.value);
     if (self.sendText.text.length > 0&&[self.characteristic.UUID.UUIDString isEqualToString:characteristic.UUID.UUIDString]) {
-        [[AlertShowView sharedInstance] showInView:self.view andMessage:[NSString stringWithFormat:@"%@",characteristic.value] andTime:10.0];
+        [JHAlertView showInView:self.view andMessage:[NSString stringWithFormat:@"%@",characteristic.value] andTime:10.0 andHeight:80];
     }
     else{
         if ([characteristic.UUID.UUIDString isEqualToString:BT_OAD_IMAGE_NOTIFY]) {
@@ -126,7 +126,7 @@
         [self.detailItem writeValue:sendData forCharacteristic:self.characteristic_oad_1 type:CBCharacteristicWriteWithResponse];
     }
     else{
-        [[AlertShowView sharedInstance] showInView:self.view andMessage:@"版本相同"];
+        [JHAlertView showInView:self.view andMessage:@"版本相同"];
     }
 }
 
@@ -200,9 +200,9 @@
     else{
         
         countTime = [NSDate date];
-        [[AlertShowView sharedInstance] showSheetWithTitle:@"TYPE" andButton:@[@"OAD",@"DATA"] andEnventBlock:^(NSInteger row, NSString *title) {
+        [JHAlertView showSheetWithTitle:@"TYPE" andButton:@[@"OAD",@"DATA"] inView:self.view andEnventBlock:^(NSInteger row, NSString *title) {
             if (row == 1) {
-                [[AlertShowView sharedInstance] showSheetWithTitle:@"TYPE" andButton:@[@"A",@"B"] andEnventBlock:^(NSInteger row, NSString *title) {
+                [JHAlertView showSheetWithTitle:@"TYPE" andButton:@[@"A",@"B"] inView:self.view andEnventBlock:^(NSInteger row, NSString *title) {
                     if (row == 1) {
                         oadData = oad_A_Data;
                         [self sendBlueToothUP];
@@ -224,7 +224,7 @@
 - (void)sendBlueToothUP{
     
     if (!self.characteristic_oad_1||!self.characteristic_oad_2) {
-        [[AlertShowView sharedInstance] showMessage:@"通道错误"];
+        [JHAlertView showMessage:@"通道错误"];
         return;
     }
     
@@ -249,7 +249,7 @@
 
 - (void)sendDataUP{
     if (!self.characteristic_data_1||!self.characteristic_data_2) {
-        [[AlertShowView sharedInstance] showMessage:@"通道错误"];
+        [JHAlertView showMessage:@"通道错误"];
         return;
     }
     x = 0;

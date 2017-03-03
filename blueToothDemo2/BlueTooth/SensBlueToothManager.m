@@ -7,7 +7,7 @@
 //
 
 #import "SensBlueToothManager.h"
-#import "AlertShowView.h"
+#import "JHAlertView.h"
 
 @interface SensBlueToothManager (){
     BOOL isScan;
@@ -109,7 +109,7 @@ single_implementation(SensBlueToothManager)
             break;
         case CBCentralManagerStatePoweredOff:
             NSLog(@">>>CBCentralManagerStatePoweredOff");
-            [[AlertShowView sharedInstance] showMessage:@"蓝牙已断开"];
+            [JHAlertView showMessage:@"蓝牙已断开"];
             break;
         case CBCentralManagerStatePoweredOn:{
             NSLog(@">>>CBCentralManagerStatePoweredOn");
@@ -172,7 +172,7 @@ single_implementation(SensBlueToothManager)
 //Peripherals断开连接
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(nullable NSError *)error{
     NSLog(@"%@断开连接",peripheral.name);
-    [[AlertShowView sharedInstance] showMessage:[NSString stringWithFormat:@"%@-连接断开",peripheral.name]];
+    [JHAlertView showMessage:[NSString stringWithFormat:@"%@-连接断开",peripheral.name]];
     if ([self.connectArr containsObject:peripheral]) {
         [self.connectArr removeObject:peripheral];
     }

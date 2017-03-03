@@ -19,6 +19,8 @@
 
 
 - (void)awakeFromNib{
+    [super awakeFromNib];
+    
     count = 0;
     ccx = self.frame.size.width/2.0f;
     ccy = self.frame.size.height/2.0f;

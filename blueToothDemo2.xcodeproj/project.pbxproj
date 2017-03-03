@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		36F5E57E1E69392300CC9B03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F5E57D1E69392300CC9B03 /* AppDelegate.m */; };
+		36F5E5841E69433100CC9B03 /* JHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F5E5831E69433100CC9B03 /* JHAlertView.m */; };
 		5635327A1DADE67400C698E4 /* Myos_Private.bin in Resources */ = {isa = PBXBuildFile; fileRef = 563532791DADE67400C698E4 /* Myos_Private.bin */; };
 		5635327C1DADEB7500C698E4 /* ImageB1012.bin in Resources */ = {isa = PBXBuildFile; fileRef = 5635327B1DADEB7500C698E4 /* ImageB1012.bin */; };
 		5636A1111D7FA3320030C735 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5636A1101D7FA3320030C735 /* main.m */; };
@@ -19,7 +20,6 @@
 		5636A12D1D7FA3320030C735 /* blueToothDemo2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5636A12C1D7FA3320030C735 /* blueToothDemo2Tests.m */; };
 		5636A1381D7FA3320030C735 /* blueToothDemo2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5636A1371D7FA3320030C735 /* blueToothDemo2UITests.m */; };
 		5636A1481D7FA5240030C735 /* SensBlueToothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5636A1471D7FA5240030C735 /* SensBlueToothManager.m */; };
-		5636A1501D7FA68D0030C735 /* AlertShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5636A14F1D7FA68D0030C735 /* AlertShowView.m */; };
 		5636A1521D7FA6BA0030C735 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5636A1511D7FA6BA0030C735 /* CoreBluetooth.framework */; };
 		5636A1591D7FC23E0030C735 /* BlueDeviceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5636A1581D7FC23E0030C735 /* BlueDeviceTableViewController.m */; };
 		5681D99B1D88F2F3002B013A /* WYCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5681D99A1D88F2F3002B013A /* WYCircleView.m */; };
@@ -45,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		36F5E57D1E69392300CC9B03 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		36F5E5821E69433100CC9B03 /* JHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHAlertView.h; sourceTree = "<group>"; };
+		36F5E5831E69433100CC9B03 /* JHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHAlertView.m; sourceTree = "<group>"; };
 		563532791DADE67400C698E4 /* Myos_Private.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = Myos_Private.bin; sourceTree = "<group>"; };
 		5635327B1DADEB7500C698E4 /* ImageB1012.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = ImageB1012.bin; sourceTree = "<group>"; };
 		5636A10C1D7FA3320030C735 /* blueToothDemo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blueToothDemo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,8 +69,6 @@
 		5636A1461D7FA5240030C735 /* SensBlueToothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensBlueToothManager.h; sourceTree = "<group>"; };
 		5636A1471D7FA5240030C735 /* SensBlueToothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensBlueToothManager.m; sourceTree = "<group>"; };
 		5636A1491D7FA5EA0030C735 /* SingletonHead.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingletonHead.h; sourceTree = "<group>"; };
-		5636A14E1D7FA68D0030C735 /* AlertShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertShowView.h; sourceTree = "<group>"; };
-		5636A14F1D7FA68D0030C735 /* AlertShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertShowView.m; sourceTree = "<group>"; };
 		5636A1511D7FA6BA0030C735 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		5636A1571D7FC23E0030C735 /* BlueDeviceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueDeviceTableViewController.h; sourceTree = "<group>"; };
 		5636A1581D7FC23E0030C735 /* BlueDeviceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueDeviceTableViewController.m; sourceTree = "<group>"; };
@@ -136,8 +136,8 @@
 				5636A1161D7FA3320030C735 /* MasterViewController.m */,
 				5636A1181D7FA3320030C735 /* DetailViewController.h */,
 				5636A1191D7FA3320030C735 /* DetailViewController.m */,
-				5636A14E1D7FA68D0030C735 /* AlertShowView.h */,
-				5636A14F1D7FA68D0030C735 /* AlertShowView.m */,
+				36F5E5821E69433100CC9B03 /* JHAlertView.h */,
+				36F5E5831E69433100CC9B03 /* JHAlertView.m */,
 				5681D9991D88F2F3002B013A /* WYCircleView.h */,
 				5681D99A1D88F2F3002B013A /* WYCircleView.m */,
 				563532791DADE67400C698E4 /* Myos_Private.bin */,
@@ -327,9 +327,9 @@
 				5681D99B1D88F2F3002B013A /* WYCircleView.m in Sources */,
 				5636A1481D7FA5240030C735 /* SensBlueToothManager.m in Sources */,
 				36F5E57E1E69392300CC9B03 /* AppDelegate.m in Sources */,
+				36F5E5841E69433100CC9B03 /* JHAlertView.m in Sources */,
 				5636A1111D7FA3320030C735 /* main.m in Sources */,
 				5636A11A1D7FA3320030C735 /* DetailViewController.m in Sources */,
-				5636A1501D7FA68D0030C735 /* AlertShowView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
